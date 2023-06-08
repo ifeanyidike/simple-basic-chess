@@ -81,17 +81,17 @@ const isLegalBlackPawnMove = (
   boardPiece: string,
   colDiff: number
 ) => {
-  const isPrevRow = destRow === currRow - 1;
+  const isNextRow = destRow === currRow - 1;
   const hasOpponentCapture = boardPiece.includes(params.white);
 
-  if (Math.abs(colDiff) === 1 && isPrevRow && hasOpponentCapture) {
+  if (Math.abs(colDiff) === 1 && isNextRow && hasOpponentCapture) {
     //we can capture enemy piece diagonally
     return true;
   }
 
   if (boardPiece !== keys.empty) return false;
 
-  if (isPrevRow && colDiff === 0) {
+  if (isNextRow && colDiff === 0) {
     return true;
   }
 
