@@ -1,3 +1,4 @@
+import "tailwindcss/tailwind.css";
 import type { CapturedPieces, PieceData } from "@component/definitions";
 import { handleDropPiece, handleSelectPiece, isOddCol } from "@component/logic";
 import { PIECES, params } from "@component/utils";
