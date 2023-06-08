@@ -27,13 +27,6 @@ export const isLegalMove = (
   const isFriendlyPiece: boolean = getPieceType(piece, dest, board);
   if (isFriendlyPiece) return false;
 
-  console.log({
-    currRow,
-    currCol,
-    destRow,
-    destCol,
-  });
-
   switch (piece) {
     case keys.pB:
     case keys.pW:
@@ -183,12 +176,6 @@ const isLegalBishopMove = (
     board
   );
 
-  console.log({
-    rowDirection,
-    colDirection,
-    pathBlocked,
-  });
-
   if (pathBlocked) return false;
 
   if ((rowDiff > 0 && colDiff < 0) || (rowDiff < 0 && colDiff > 0)) {
@@ -238,11 +225,6 @@ const isLegalRookMove = (
     board
   );
 
-  console.log({
-    rowDirection,
-    colDirection,
-    pathBlocked,
-  });
   if (pathBlocked) return false;
 
   return true;
