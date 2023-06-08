@@ -1,9 +1,10 @@
 "use client";
+import "tailwindcss/tailwind.css";
 import { keys, params } from "@component/utils";
-import Board from "./components/Board";
 import { useState } from "react";
 import type { CapturedPieces, PieceData } from "@component/definitions";
 import CapturedItems from "./components/CapturedItems";
+import Board from "./components/Board";
 
 export default function Home() {
   const _board = [
