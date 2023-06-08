@@ -52,7 +52,7 @@ const Board = (props: Pieces) => {
               key={`${x}-${y}`}
               className={`w-[calc(100%/8)] ${
                 isOddCol(x, y) ? "bg-gray-500" : "bg-white"
-              } text-gray-950 sm:text-7xl text-4xl cursor-pointer border border-solid border-gray-500 flex justify-center items-center disabled:opacity-50`}
+              } text-gray-950 sm:text-7xl text-4xl cursor-pointer border border-solid border-gray-500 flex justify-center items-center focus:border-2 focus:border-rose-800`}
               dangerouslySetInnerHTML={{
                 __html: PIECES[board[x][y]],
               }}
