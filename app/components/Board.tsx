@@ -1,4 +1,3 @@
-import "tailwindcss/tailwind.css";
 import type { CapturedPieces, PieceData } from "@component/definitions";
 import { handleDropPiece, handleSelectPiece, isOddCol } from "@component/logic";
 import { PIECES, params } from "@component/utils";
@@ -47,11 +46,11 @@ const Board = (props: Pieces) => {
   return (
     <div className="w-[100vmin] h-[90%] m-auto border border-solid border-gray-500">
       {board.map((row, x: number) => (
-        <div key={x} className={`flex h-[calc(100%/${params.numRows})]`}>
+        <div key={x} className="flex h-[calc(100%/8)]">
           {row.map((_, y: number) => (
             <button
               key={`${x}-${y}`}
-              className={`w-[calc(100%/${params.numRows})] ${
+              className={`w-[calc(100%/8)] ${
                 isOddCol(x, y) ? "bg-gray-500" : "bg-white"
               } text-gray-950 sm:text-7xl text-4xl cursor-pointer border border-solid border-gray-500 flex justify-center items-center disabled:opacity-50`}
               dangerouslySetInnerHTML={{

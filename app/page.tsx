@@ -1,5 +1,4 @@
 "use client";
-import "tailwindcss/tailwind.css";
 import { keys, params } from "@component/utils";
 import { useState } from "react";
 import type { CapturedPieces, PieceData } from "@component/definitions";
