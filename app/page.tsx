@@ -30,8 +30,8 @@ export default function Home() {
   return (
     <div className="h-[100vmin] flex items-center justify-center">
       <CapturedItems type={params.black} capturedPieces={capturedPieces} />
-      <div className="h-full mt-5">
-        <h4 className="flex justify-center font-bold h-5 text-rose-500">
+      <div className="h-full flex flex-col justify-center">
+        <h4 className="flex justify-center font-bold h-5 mt-5 text-rose-500">
           {turn === params.white && "White to Move"}
         </h4>
 
